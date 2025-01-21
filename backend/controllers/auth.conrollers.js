@@ -46,6 +46,7 @@ await generateTokenAndSetCookie (newUser._id,res);
 await newUser.save();
 
    res.status(201).json({
+      message: 'User created successfully' ,
                _id: newUser._id,
                fullName: newUser.fullName,
                username: newUser.username,
