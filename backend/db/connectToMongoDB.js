@@ -41,8 +41,8 @@ const connectToMongoDB = async () => {
   try {
     console.log("MONGODB_URL:", process.env.MONGODB_URL); // Debugging log
     await mongoose.connect(process.env.MONGODB_URL, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true, // Uncomment this for improved compatibility
+     // useNewUrlParser: true,
+     // useUnifiedTopology: true, // Uncomment this for improved compatibility
       // useFindAndModify: false,
       // useCreateIndex: true,
     });

@@ -1,7 +1,7 @@
 // const express = require('express');
 import express from 'express';
 import cookieParser from 'cookie-parser';
-const app = express();
+// const app = express();
 import authRoutes from "./routes/auth.routes.js";
 import messageRoutes from "./routes/message.routes.js";
 import userRoutes from "./routes/user.routes.js";
@@ -9,6 +9,9 @@ import connectToMongoDB from "./db/connectToMongoDB.js";
 // const dotenv = require('dotenv');
 import dotenv from 'dotenv';
 dotenv.config();
+
+import { app, server } from "./socket/socket.js";
+
 const PORT = process.env.PORT;
 console.log("port:", PORT);
 console.log("process.env.JWT_SECRET:", process.env.JWT_SECRET);
@@ -22,7 +25,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 app.use("/api/users", userRoutes);
 
-app.listen(PORT, ()=>{
+server.listen(PORT, ()=>{
     connectToMongoDB();
     console.log(`Server starting at port ${PORT}`);
 });
