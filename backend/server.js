@@ -1,3 +1,4 @@
+import path from "path";
 // const express = require('express');
 import express from 'express';
 import cookieParser from 'cookie-parser';
@@ -11,6 +12,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import { app, server } from "./socket/socket.js";
+const __dirname = path.resolve();
 
 const PORT = process.env.PORT;
 console.log("port:", PORT);
@@ -24,6 +26,12 @@ app.use(cookieParser());
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 app.use("/api/users", userRoutes);
+
+app.use(express.static(path.join(__dirname, "/frontend/chatapp/dist")));
+
+app.get("*", (req, res) => {
+	res.sendFile(path.join(__dirname, "frontend/chatapp", "dist", "index.html"));
+});
 
 server.listen(PORT, ()=>{
     connectToMongoDB();
