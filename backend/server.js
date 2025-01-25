@@ -17,7 +17,7 @@ const __dirname = path.resolve();
 const PORT = process.env.PORT;
 console.log("port:", PORT);
 console.log("process.env.JWT_SECRET:", process.env.JWT_SECRET);
-app.get("/",(req,res)=>{
+app.get("/jothi",(req,res)=>{
     res.send("Hello JOTHI LAKSHMI !!");
 });
 app.use(express.json());

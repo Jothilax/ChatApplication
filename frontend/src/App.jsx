@@ -11,10 +11,10 @@ function App() {
   return (
     <div className='p-4 h-screen flex items-center justify-center'>
       <Routes>
-
-      <Route path='/' element={authUser ? <Home /> : <Login />} /> 
-     	<Route path='/login' element={authUser ? <Navigate to='/' /> : <Login />} />
-			<Route path='/signup' element={authUser ? <Navigate to='/' /> : <Signup />} /> 
+      <Route path='/' element={<Login />} />
+      <Route path='/home' element={authUser ? <Home /> : <Login />} /> 
+     	<Route path='/login' element={authUser ? <Navigate to='/home' /> : <Login />} />
+			<Route path='/signup' element={authUser ? <Navigate to='/home' /> : <Signup />} /> 
 
          {/* <Route path='/' element={<Home />} />
          <Route path='/login' element={<Login />} />
