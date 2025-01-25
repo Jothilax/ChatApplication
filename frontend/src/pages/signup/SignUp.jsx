@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useState } from "react";
-import GenderCheckbox from './GenderCheckbox';
-import useSignup from '../../hooks/useSignup';
+import GenderCheckbox from './GenderCheckbox.jsx';
+import useSignup from '../../hooks/useSignup.js';
 
 const Signup = () => {
 

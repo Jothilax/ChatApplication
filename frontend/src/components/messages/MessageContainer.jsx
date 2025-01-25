@@ -1,10 +1,10 @@
 import React from 'react';
-import Message from './Message';
-import MessageInput from "./MessageInput";
-import Messages from './Messages';
+import Message from './Message.jsx';
+import MessageInput from "./MessageInput.jsx";
+import Messages from './Messages.jsx';
 import { TiMessages } from "react-icons/ti"; 
 import { useEffect } from "react";
-import { useAuthContext } from "../../context/AuthContext";
+import { useAuthContext } from "../../context/AuthContext.jsx";
 import useConversation from "../../zustant/useConversation.js";
 
 const MessageContainer = () => {

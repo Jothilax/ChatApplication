@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
-import { useSocketContext } from "../context/SocketContext";
-import useConversation from "../zustant/useConversation";
+import { useSocketContext } from "../context/SocketContext.jsx";
+import useConversation from "../zustant/useConversation.js";
 
 import notificationSound from "../assets/sounds/notification.mp3";
 

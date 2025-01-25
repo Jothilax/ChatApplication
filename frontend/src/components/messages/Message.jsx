@@ -18,8 +18,8 @@
 
 // export default Message;
 
-import { useAuthContext } from "../../context/AuthContext";
-import { extractTime } from "../../utils/extractTime";
+import { useAuthContext } from "../../context/AuthContext.jsx";
+import { extractTime } from "../../utils/extractTime.js";
 import useConversation from "../../zustant/useConversation.js";
 
 const Message = ({ message }) => {

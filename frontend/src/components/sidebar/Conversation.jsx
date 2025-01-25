@@ -1,6 +1,6 @@
 import React from 'react';
 import useConversation from "../../zustant/useConversation.js";
-import { useSocketContext } from "../../context/SocketContext";
+import { useSocketContext } from "../../context/SocketContext.jsx";
 
 const Conversation = ({ conversation, lastIdx, emoji }) => {
 	const { selectedConversation, setSelectedConversation } = useConversation();
